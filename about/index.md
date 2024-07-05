@@ -7,7 +7,7 @@ date: 2024-06-25 11:10:32
 
 We three are currently undergrad @UMich. You know, workload here is bad, weather is worse, while food is the worst. We initiated COOK482 in 2023 to collect recipes we create or refer to. The collection of recipes was originally kept in a shared docs, but in 2024, we decided to build a website to display them. That is COOK 482.
 
-If you are interested in making Chinese food or desserts (especially when u are in the US), feel free to check recipes on our website! We made changes to some traditional Chinese cuisines catering to the ingredients we could get. Do not hesitate to star [our repo](https://github.com/COOK482/COOK482.github.io)/open an issue if you like it or have anything to say!
+If you are interested in making Chinese food or desserts (especially when u are in the US), feel free to check recipes on our website! We made changes to some traditional Chinese cuisines catering to the ingredients we could get. Do not hesitate to star [our repo](https://github.com/COOK482/COOK482_source)/open an issue/pr if you like it or have anything to say/contribute!
 
 ## Intro to authors by authors
 
