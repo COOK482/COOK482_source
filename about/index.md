@@ -13,6 +13,6 @@ If you are interested in making Chinese food or desserts (especially when u are 
 
 | Introduced by\Introducing |                  LazybonesSun                  |            CatCatZheng             |                                                zPatronus                                                |
 | :-----------------------: | :--------------------------------------------: | :--------------------------------: | :-----------------------------------------------------------------------------------------------------: |
-|       LazybonesSun        | Student Lazybones Failed COOK482 Last Semester | WE HAVE A CATCAT PROF IN COOK482!! |                                      The God of COOK Department!!                                       |
+|       LazybonesS        | Get Cooked in COOK482 | WE HAVE A CATCAT PROF IN COOK482!! |                                      The God of COOK Department!!                                       |
 |        CatCatZheng        |            COOK482 SmartSmartProf.             | BadCatCat loving desserts & coffee |                                     COOK482 Prof. not loving coffee                                     |
 |         zPatronus         |               COOK482 吃辣 Prof.               |        COOK482 不吃辣 Prof.        | COOK482 C+ Student；吃不了一点百人饭，最喜欢的菜系是粤菜，比较擅长快速出餐一人食aka家庭版预制菜和炸厨房 |
