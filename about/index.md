@@ -11,7 +11,7 @@ If you are interested in making Chinese food or desserts (especially when u are 
 
 ## Intro to authors by authors
 
-| Introduced by\Introducing |                  LazybonesSun                  |            CatCatZheng             |                                                zPatronus                                                |
+| Introduced by\Introducing |                  LazybonesS                  |            CatCatZheng             |                                                zPatronus                                                |
 | :-----------------------: | :--------------------------------------------: | :--------------------------------: | :-----------------------------------------------------------------------------------------------------: |
 |       LazybonesS        | Get Cooked in COOK482 | WE HAVE A CATCAT PROF IN COOK482!! |                                      The God of COOK Department!!                                       |
 |        CatCatZheng        |            COOK482 SmartSmartProf.             | BadCatCat loving desserts & coffee |                                     COOK482 Prof. not loving coffee                                     |
