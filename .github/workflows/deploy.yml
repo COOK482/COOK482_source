@@ -1,0 +1,27 @@
+name: Trigger Deployment on Commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  send-post-request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Generate TOTP Code
+      id: generate_totp
+      run: |
+        echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
+        echo "from datetime import datetime; import pyotp; print(pyotp.TOTP('${{ secrets.SECRET_KEY }}').now())" > totp.py
+        TOTP_CODE=$(python3 totp.py)
+        echo "code=$TOTP_CODE" >> $GITHUB_ENV
+
+    - name: Send POST request to Verifier
+      run: |
+        curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
+          -d "code=${{ env.code }}"
