@@ -3,7 +3,7 @@ name: Trigger Verifier on Commit
 on:
   push:
     branches:
-      - main  # or specify your branch name
+      - main
 
 jobs:
   send-post-request:
