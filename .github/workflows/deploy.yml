@@ -1,9 +1,9 @@
-name: Trigger Deployment on Commit
+name: Trigger Verifier on Commit
 
 on:
   push:
     branches:
-      - main
+      - main  # or specify your branch name
 
 jobs:
   send-post-request:
@@ -13,12 +13,18 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Set up Python and Install pyotp
+      run: |
+        python3 -m venv venv
+        source venv/bin/activate
+        pip install pyotp
+
     - name: Generate TOTP Code
       id: generate_totp
       run: |
         echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
-        echo "from datetime import datetime; import pyotp; print(pyotp.TOTP('${{ secrets.SECRET_KEY }}').now())" > totp.py
-        TOTP_CODE=$(python3 totp.py)
+        echo "import pyotp; print(pyotp.TOTP('${{ secrets.SECRET_KEY }}').now())" > totp.py
+        TOTP_CODE=$(venv/bin/python3 totp.py)
         echo "code=$TOTP_CODE" >> $GITHUB_ENV
 
     - name: Send POST request to Verifier
