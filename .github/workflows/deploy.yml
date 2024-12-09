@@ -28,6 +28,26 @@ jobs:
         echo "code=$TOTP_CODE" >> $GITHUB_ENV
 
     - name: Send POST request to Verifier
+      id: send_post
       run: |
-        curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
-          -d "code=${{ env.code }}"
+        response=$(curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
+          -d "code=${{ env.code }}" -s)
+        echo "Response: $response"
+        echo "$response" > response.json
+        success=$(echo $response | jq -r '.success')
+        message=$(echo $response | jq -r '.message')
+
+        if [[ "$success" == "false" ]]; then
+          echo "Message: $message"
+          echo "Try manual deployment"
+          exit 1
+        else
+          echo "Verification succeeded."
+        fi
+      env:
+        code: ${{ env.code }}
+        FLASK_VERIFIER_URL: ${{ secrets.FLASK_VERIFIER_URL }}
+
+    - name: Handle Success
+      if: steps.send_post.outputs.success == 'true'
+      run: echo "Action completed successfully!"
