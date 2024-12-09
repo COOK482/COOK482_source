@@ -27,7 +27,7 @@ jobs:
         TOTP_CODE=$(venv/bin/python3 totp.py)
         echo "code=$TOTP_CODE" >> $GITHUB_ENV
 
-    - name: Send POST request to Verifier
+    - name: Send POST request to AuthRun
       id: send_post
       run: |
         response=$(curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
