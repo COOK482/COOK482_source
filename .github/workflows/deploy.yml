@@ -31,4 +31,3 @@ jobs:
       run: |
         curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
           -d "code=${{ env.code }}"
-
