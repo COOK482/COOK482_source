@@ -26,12 +26,11 @@ jobs:
         echo "import pyotp; print(pyotp.TOTP('${{ secrets.SECRET_KEY }}').now())" > totp.py
         TOTP_CODE=$(venv/bin/python3 totp.py)
         echo "code=$TOTP_CODE" >> $GITHUB_ENV
+        echo "::add-mask::$TOTP_CODE"
 
     - name: Send deployment request to AuthRun
       id: send_post
       run: |
-        echo "::add-mask::${{ env.code }}"
-        
         set +x
         
         _CODE="${{ env.code }}"
