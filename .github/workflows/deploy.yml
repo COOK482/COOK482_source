@@ -30,8 +30,16 @@ jobs:
     - name: Send deployment request to AuthRun
       id: send_post
       run: |
+        # Mask the code in the logs
+        echo "::add-mask::${{ env.code }}"
+        
+        # Disable command echoing to avoid printing the curl command with the code
+        set +x
         response=$(curl -X POST "${{ secrets.FLASK_VERIFIER_URL }}/verify" \
           -d "code=${{ env.code }}" -s)
+        # Re-enable command echoing
+        set -x
+
         echo "Response: $response"
         echo "$response" > response.json
         success=$(echo $response | jq -r '.success')
