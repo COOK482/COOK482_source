@@ -3,6 +3,10 @@ title: 关于COOK482
 date: 2024-06-25 11:10:32
 ---
 
+## What is COOK 482
+
+COOK482 is a comprehensive exploration of the principles, design strategies, and practical techniques behind modern home cooking. Our goal is to illuminate the core concepts that shape the preparation of diverse dishes, focusing on everything from ingredient selection and flavor synergy to meal orchestration and workflow efficiency. By systematically diving into these topics, you'll acquire the foundational skills needed to adapt recipes, manage cooking complexities, and ultimately create delicious, restaurant-quality food in any environment.
+
 ## Why COOK 482
 
 We three are currently undergrad @UMich. You know, workload here is bad, weather is worse, while food is the worst. We initiated COOK482 in 2023 to collect recipes we create or refer to. The collection of recipes was originally kept in a shared docs, but in 2024, we decided to build a website to display them. That is COOK 482.
